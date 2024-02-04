@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     lateinit var bodyLayout:FrameLayout
     lateinit var buttonChangeColor:Button
+    lateinit var buttonChangeActivity:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +27,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
 
         buttonChangeColor=findViewById(R.id.buttonChangeColor)
+        buttonChangeActivity=findViewById(R.id.buttonChangeActivity)
 
         buttonChangeColor.setOnClickListener(this)
+        buttonChangeActivity.setOnClickListener(this)
 
     }
 
@@ -39,6 +42,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         if(v!!.id==R.id.buttonChangeColor){
             val randomColor = Color.argb(255, Random.nextInt(256), Random.nextInt(256), Random.nextInt(256))
             bodyLayout.setBackgroundColor(randomColor)
+        }
+        else if(v!!.id==R.id.buttonChangeActivity){
+            var activity2: Intent = Intent(this,Activity2::class.java)
+            startActivity(activity2)
         }
     }
 
