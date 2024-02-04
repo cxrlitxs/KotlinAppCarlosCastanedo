@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
+import android.widget.EditText
 import android.widget.FrameLayout
+import org.w3c.dom.Text
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(), OnClickListener {
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     lateinit var bodyLayout:FrameLayout
     lateinit var buttonChangeColor:Button
     lateinit var buttonChangeActivity:Button
+    lateinit var edTextWriteSomething:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +31,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
         buttonChangeColor=findViewById(R.id.buttonChangeColor)
         buttonChangeActivity=findViewById(R.id.buttonChangeActivity)
+        edTextWriteSomething=findViewById(R.id.edTextWriteSomething)
 
         buttonChangeColor.setOnClickListener(this)
         buttonChangeActivity.setOnClickListener(this)

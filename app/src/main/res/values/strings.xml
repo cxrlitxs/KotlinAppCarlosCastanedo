@@ -3,4 +3,5 @@
     <string name="welcome_app">BIENVENIDO A LA APP</string>
     <string name="change_color">Cambiar color</string>
     <string name="change_activity">Cambiar a Activity2</string>
+    <string name="write_something">Escribe algo</string>
 </resources>
