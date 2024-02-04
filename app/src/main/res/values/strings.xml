@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinAppCarlosCastanedo</string>
+    <string name="welcome_app">BIENVENIDO A LA APP</string>
 </resources>
