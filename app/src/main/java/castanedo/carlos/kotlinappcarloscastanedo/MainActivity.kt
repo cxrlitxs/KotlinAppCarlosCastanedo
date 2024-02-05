@@ -48,7 +48,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             bodyLayout.setBackgroundColor(randomColor)
         }
         else if(v!!.id==R.id.buttonChangeActivity){
+            var message = edTextWriteSomething.text.toString()
             var activity2: Intent = Intent(this,Activity2::class.java)
+            activity2.putExtra("MESSAGE", message)
             startActivity(activity2)
         }
     }
