@@ -4,4 +4,6 @@
     <string name="change_color">Cambiar color</string>
     <string name="change_activity">Cambiar a Activity2</string>
     <string name="write_something">Escribe algo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
