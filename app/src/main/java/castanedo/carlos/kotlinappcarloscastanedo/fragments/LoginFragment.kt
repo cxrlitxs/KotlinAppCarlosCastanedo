@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import castanedo.carlos.kotlinappcarloscastanedo.MainActivity
 import castanedo.carlos.kotlinappcarloscastanedo.R
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +29,7 @@ class LoginFragment : Fragment(), OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        navController = findNavController()
     }
 
     override fun onCreateView(
@@ -42,10 +43,10 @@ class LoginFragment : Fragment(), OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        edTxtEmail = view.findViewById(R.id.edTxtEmail)
-        edTxtPassword = view.findViewById(R.id.edTxtPassword)
-        loginButton = view.findViewById(R.id.loginButton)
-        registerButton = view.findViewById(R.id.registerButton)
+        edTxtEmail = view.findViewById(R.id.edTxtEmailLogin)
+        edTxtPassword = view.findViewById(R.id.edTxtPasswordLogin)
+        loginButton = view.findViewById(R.id.loginButtonLogin)
+        registerButton = view.findViewById(R.id.registerButtonLogin)
 
         loginButton.setOnClickListener(this)
         registerButton.setOnClickListener(this)
@@ -53,7 +54,7 @@ class LoginFragment : Fragment(), OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        if (v!!.id == R.id.loginButton){
+        if (v!!.id == R.id.loginButtonLogin){
             val sEmail = edTxtEmail.text.toString()
             val sPassword = edTxtPassword.text.toString()
 
@@ -84,7 +85,7 @@ class LoginFragment : Fragment(), OnClickListener {
                     }
                 }
 
-        } else if(v!!.id == R.id.registerButton){
+        } else if(v!!.id == R.id.registerButtonLogin){
             navController.navigate(R.id.action_loginFragment_to_registerFragment2)
         }
     }
